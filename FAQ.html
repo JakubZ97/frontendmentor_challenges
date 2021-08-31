@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="FAQ.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div class="image">
+                <img class="main-image">
+                <img class="secondary-image">
+            </div>
+            <div class="FAQ">
+                <h2>FAQ</h2>
+                <div class="box">
+                    <p class="question">How many team members can I invite?
+                        <span class="arrow"><img src="images/icon-arrow-down.svg"></span></p>
+                    <p class="answer-inactive">You can invite up to 2 additional users on the Free plan. 
+                        There is no limit on team members for the Premium plan.
+                    </p>
+                </div>
+                <div class="box">
+                    <p class="question">What is the maximum file upload size?
+                        <span class="arrow"><img src="images/icon-arrow-down.svg"></span>
+                    </p>
+                    <p class="answer-inactive">No more than 2GB. All files in your account must fit your allotted storage space.</p>
+                </div>
+                <div class="box">
+                    <p class="question">How do I reset my password?
+                        <span class="arrow"><img src="images/icon-arrow-down.svg"></span>
+                    </p>
+                    <p class="answer-inactive">Click “Forgot password” from the login page or “Change password” from your profile page.
+                        A reset link will be emailed to you.</p>
+                </div>
+                <div class="box">
+                    <p class="question">Can I cancel my subscription?
+                        <span class="arrow"><img src="images/icon-arrow-down.svg"></span>
+                    </p>
+                    <p class="answer-inactive">Yes! Send us a message and we’ll process your request no questions asked.</p>
+                </div>
+                <div class="box">
+                    <p class="question">Do you provide additional support?
+                        <span class="arrow"><img src="images/icon-arrow-down.svg"></span>
+                    </p>
+                    <p class="answer-inactive">Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
+                </div>
+            </div>
+        </div>
+
+
+    <script type="text/javascript">
+        
+
+        let questions = document.querySelectorAll('.question');
+
+        function show(answer){
+            if (answer.nextElementSibling.className == 'answer-inactive'){
+                hide();
+                answer.nextElementSibling.className = 'answer-active';
+                answer.children[0].style.transform = 'rotate(180deg)';
+                answer.style.fontWeight = "900";
+            } else {
+                hide();
+            }
+        }
+        function hide(){
+            questions.forEach(elem => {
+                    const sibling = elem.nextElementSibling;
+                    sibling.className = 'answer-inactive';
+                    elem.children[0].style.transform = 'rotate(0deg)'
+                    elem.style.fontWeight = "200"
+                })
+        }
+
+        questions.forEach(elem => {
+            elem.addEventListener("click", ()=>{show(elem)})
+        });
+    </script>
+    </body>
+</html>
