@@ -5,4 +5,4 @@ Programmed functionality:
 * User can see all interactive elements by hovering above them.  
 * Layout of the page changes depends on user device's screen.  
   
-Site is avalible [here](https://jakubz97.github.io/FAQ-accordion-card/)
+Site is avalible [here](https://jakubziemak.github.io/FAQ-accordion-card/)
